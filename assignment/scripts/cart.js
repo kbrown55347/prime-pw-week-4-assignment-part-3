@@ -15,3 +15,11 @@ console.log('Item added?', addItem('broccoli'));
 console.log('Item added?', addItem('apples'));
 console.log('Item added?', addItem('cookies'));
 console.log(basket);
+
+function listItems() {
+  for (i=0; i<basket.length; i++) {
+    console.log(basket[i]);
+  }
+}
+
+listItems();
