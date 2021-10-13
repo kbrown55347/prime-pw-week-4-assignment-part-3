@@ -14,7 +14,7 @@ function addItem(item) {
 console.log('Item added?', addItem('broccoli'));
 console.log('Item added?', addItem('apples'));
 console.log('Item added?', addItem('cookies'));
-console.log('What is now in my basket?', basket);
+console.log('What is in my basket now?', basket);
 
 function listItems() {
   for (i=0; i<basket.length; i++) {
@@ -23,3 +23,12 @@ function listItems() {
 }
 
 listItems();
+
+function empty() {
+  for (i=0; i=basket.length; i++) {
+    basket.pop();
+  }
+  console.log('My basket is now empty:', basket);
+}
+
+empty();
