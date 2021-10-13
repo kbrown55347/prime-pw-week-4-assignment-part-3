@@ -69,3 +69,18 @@ console.log(`Item added? ${addItem('bread')}`);
 console.log(`Item added? ${addItem('gum')}`);
 console.log(`Item added? ${addItem('pumpkins')}`);
 console.log(`Basket now holds: ${basket}`);
+
+// #4
+
+function removeItem(item) {
+  basket.splice(basket.indexOf(item), 1);
+  if (basket.indexOf(item)) {
+    return `Item removed: ${item}`;
+  } else {
+    return 'null';
+  }
+}
+
+console.log(removeItem('pickles'));
+console.log(removeItem('oranges'));
+console.log(basket);
