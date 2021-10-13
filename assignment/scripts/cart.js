@@ -17,7 +17,7 @@ console.log(`Item added? ${addItem('cookies')}`);
 console.log(`What is in my basket now? ${basket}`);
 
 function listItems() {
-  for (i=0; i<basket.length; i++) {
+  for (let i=0; i<basket.length; i++) {
     console.log(`Item(s) in my basket: ${basket[i]}`);
   }
 }
@@ -25,7 +25,7 @@ function listItems() {
 listItems();
 
 function empty() {
-  for (i=0; i=basket.length; i++) {
+  for (let i=0; i=basket.length; i++) {
     basket.pop();
   }
   console.log(`My basket is now empty so this should be blank: ${basket}`);
@@ -74,7 +74,8 @@ console.log(`Basket now holds: ${basket}`);
 
 function removeItem(item) {
   if (basket.includes(item)) {
-    basket.splice(basket.indexOf(item), 1);
+    let itemIndex = basket.indexOf(item);
+    basket.splice(itemIndex, 1);
     return `Item removed: ${item}`;
   } else {
     return 'null, item is not in basket';
