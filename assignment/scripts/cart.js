@@ -66,18 +66,18 @@ console.log(`Item added? ${addItem('bananas')}`);
 console.log(`Item added? ${addItem('cucumbers')}`);
 console.log(`Item added? ${addItem('pickles')}`);
 console.log(`Item added? ${addItem('bread')}`);
-console.log(`Item added? ${addItem('gum')}`);
+console.log(`Item added? ${addItem('pickles')}`);
 console.log(`Item added? ${addItem('pumpkins')}`);
 console.log(`Basket now holds: ${basket}`);
 
 // #4
 
 function removeItem(item) {
-  basket.splice(basket.indexOf(item), 1);
-  if (basket.indexOf(item)) {
+  if (basket.includes(item)) {
+    basket.splice(basket.indexOf(item), 1);
     return `Item removed: ${item}`;
   } else {
-    return 'null';
+    return 'null, item is not in basket';
   }
 }
 
