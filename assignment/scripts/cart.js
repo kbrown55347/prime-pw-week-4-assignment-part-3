@@ -17,8 +17,8 @@ console.log(`Item added? ${addItem('cookies')}`);
 console.log(`What is in my basket now? ${basket}`);
 
 function listItems() {
-  for (let i=0; i<basket.length; i++) {
-    console.log(`Item(s) in my basket: ${basket[i]}`);
+  for (let item of basket) {
+    console.log(`Item(s) in my basket: ${item}`);
   }
 }
 
